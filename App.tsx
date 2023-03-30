@@ -11,8 +11,8 @@ export default function App() {
   return (
     <ThemeContext.Provider value='{theme}'>
       <SafeAreaView style={theme === 'light' ? styles.container : [styles.container, { backgroundColor: '#000' }]}>
-        <StatusBar style="auto" />
-        <Switch style={{ marginTop: 30 }} value={theme === 'light'}
+        <Text style={{ color: "gray" }}>Mode</Text>
+        <Switch style={{ marginTop: 5 }} value={theme === 'light'}
           onValueChange={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
       </SafeAreaView>
       <KeyBoard />
